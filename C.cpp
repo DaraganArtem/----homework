@@ -1,15 +1,18 @@
 #include <iostream>
 
-int main()
+void print_array(int* p)
 {
-	int a;
-	int N = 0;
-	do{
-		std::cin >> a;
-		if (a % 2 == 0){
-			N = N + 1;
-		}
-	}while (a != 0);
-	std::cout << "Количество чётных чисел в последовательности: " << N - 1 << '\n';
-	return 0;
+	for (int i = 0; i < 6; i++){
+		std::cout << p[i] << ' ';
+	}
+	std::cout << '\n';
+}
+
+int main() {
+    int a[6];
+    for (int i = 0; i < 6; i++) {
+    	std::cin >> a[i];
+    }
+    print_array(a);
+    return 0;
 }

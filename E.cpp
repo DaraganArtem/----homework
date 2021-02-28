@@ -1,21 +1,21 @@
 #include <iostream>
 
-int main()
+int do_some_awesome_work(int* a, int* b)
 {
-	int a;
-	int A = 0;
-	do{
-		std::cin >> a;
-		if (a % 2 == 0 and a > A){
-			A = a;
-		}
-	}while (a != 0);
-	if (A == 0){
-		std::cout << "В последовательности нет чётных чисел." << '\n';
-		return 0;
+	if (*a < *b) {
+		return *a;
 	}
 	else {
-		std::cout << "Наибольшее чётное число в последовательности: " << A << '\n';
-		return 0;
+		return *b;
 	}
+}
+
+int main() 
+{
+	int a;
+	int b;
+	std::cin >> a;
+	std::cin >> b;
+	std::cout << do_some_awesome_work(&a, &b);
+	return 0;
 }
